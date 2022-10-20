@@ -1,3 +1,5 @@
+const startButton = document.querySelector('#start-button');
+
 const startGame = (el) => {
   const level = document.querySelector('#difficulty-selection').value;
 
@@ -6,8 +8,10 @@ const startGame = (el) => {
     localStorage.setItem('level', level);
     location.href = './assets/pages/game.html';
   }
-  else 
+  else {
+    startButton.style = 'background-color: #be2626';
     alert('Escolha um nível');
+  }
 }
 
-document.querySelector('#start-button').addEventListener('click', startGame)
+startButton.addEventListener('click', startGame)

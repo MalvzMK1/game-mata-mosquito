@@ -10,7 +10,6 @@ let timeAccordingToDifficulty = 0;
 setCronometerTime(timeRemaining);
 
 let level = localStorage.getItem('level');
-alert(level)
 
 const cronometer = setInterval(() => {
   timeRemaining -= 1;
