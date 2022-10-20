@@ -5,22 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mata Mosquito</title>
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script src="./assets/js/main.js" defer type="module"></script>
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <link rel="shortcut icon" href="./assets/images/mosquito.png" type="image/x-icon">
+  <script src="./assets/js/index.js" defer type="module"></script>
 </head>
 <body>
   <main>
-
-    <div class="pannel">
-      <div class="remaining-lifes">
-        <img id="life1" src="./assets/images/coracao_cheio.png" alt="">
-        <img id="life2" src="./assets/images/coracao_cheio.png" alt="">
-        <img id="life3" src="./assets/images/coracao_cheio.png" alt="">
-      </div>
-      <div class="cronometer">
-        <p>Remaining time: <span id="cronometer-time"></span></p>
-      </div>
+    <img id="start-game-img" src="./assets/images/game.png" alt="You Win!">
+    <div class="select-container">
+      <select name="difficulty" id="difficulty-selection">
+        <option value="default">Selecione uma dificuldade</option>
+        <option value="easy">Fácil</option>
+        <option value="medium">Médio</option>
+        <option value="difícil">Difícil</option>
+        <option value="extreme" class="danger-span">EXTREMO</option>
+      </select>
     </div>
+    <button type="button" id="start-button">Iniciar</button>
   </main>
 </body>
 </html>

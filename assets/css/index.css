@@ -1,0 +1,62 @@
+@import url('./reset.css');
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#start-game-img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.select-container {
+  margin: 20px;
+  height: 50px;
+  width: fit-content;
+}
+
+.select-container select {
+  padding: 0 20px;
+  height: 100%;
+  width: 100%;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: 0 0 14px 5px #0004;
+  transition: all 200ms ease;
+}
+
+.select-container select:focus {
+  box-shadow: 0 0 14px 5px #34c4c9;
+  outline: none;
+}
+
+.select-container select option {
+  font-weight: 400;
+}
+
+.danger-span {
+  color: #ff0000;
+  font-weight: bolder;
+}
+
+#start-button {
+  background-color: #34c4c977;
+  border: none;
+  box-shadow: 0 0 15px #2227;
+  padding: 12px 24px;
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  color: #fff;
+  transition: all 400ms ease-in-out;
+  text-shadow: 0 0 3px #000;
+}
+
+#start-button:hover {
+  background-color: #389e41;
+  transform: scale(1.2);
+}
