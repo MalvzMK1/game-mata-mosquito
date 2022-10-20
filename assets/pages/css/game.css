@@ -1,5 +1,5 @@
-@import url(./flyConfig.css);
-@import url(./reset.css);
+@import url(../../css/flyConfig.css);
+@import url(../../css/reset.css);
 
 .pannel {
   position: absolute;

@@ -8,13 +8,16 @@ let lifes = 3;
 let timeRemaining = 10;
 setCronometerTime(timeRemaining);
 
+let level = window.location.search.replace('?', '');
+alert(level)
+
 const cronometer = setInterval(() => {
   timeRemaining -= 1;
 
   if (timeRemaining === 0) {
     clearInterval(cronometer);
     clearInterval(createFlies);
-    alert('Vitória');
+    window.document.location.href = './victory.html'
   } else {
     setCronometerTime(timeRemaining);
   }
@@ -31,12 +34,12 @@ document.body.onresize = defineWindowDimensions();
 
 const renderImageInRandomPosition = () => {
   if (lifes === 0) {
-    window.document.location.href = './assets/pages/game_over.html';
+    window.document.location.href = './game_over.html';
   }
 
   if (document.querySelector('#fly')) {
     document.querySelector('#fly').remove();
-    document.querySelector(`#life${lifes}`).src = './assets/images/coracao_vazio.png';
+    document.querySelector(`#life${lifes}`).src = '../images/coracao_vazio.png';
     lifes--;
   }
 
@@ -48,7 +51,7 @@ const renderImageInRandomPosition = () => {
   positionY = positionY < 0 ? 0 : positionY;
 
   const fly = document.createElement('img');
-  fly.src = './assets/images/mosquito.png'
+  fly.src = '../images/mosquito.png'
   fly.style.left = positionX + 'px';
   fly.style.top = positionY + 'px';
   fly.style.position = 'absolute';
