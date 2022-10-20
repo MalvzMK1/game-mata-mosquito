@@ -11,12 +11,18 @@
 <body>
   <main>
     <img class="game-result-img" src="../images/vitoria.png" alt="You Win!">
-    <button type="button" class="restart-button">Reiniciar</button>
+    <div class="buttons-container">
+      <button type="button" class="button" id="restart-button">Reiniciar</button>
+      <button type="button" class="button menu-button" id="menu-button">Menu Inicial</button>
+    </div>
   </main>
 </body>
 <script>
-  document.querySelector('.restart-button').addEventListener('click', () => {
-    window.location.href = './game.html'
+  document.querySelector('#restart-button').addEventListener('click', () => {
+    window.location.href = './game.html';
+  });
+  document.querySelector('#menu-button').addEventListener('click', () => {
+    window.location.href = '../../index.html';
   });
 </script>
 </html>

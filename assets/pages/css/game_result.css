@@ -14,7 +14,16 @@ main {
   max-width: 500px;
 }
 
-.restart-button {
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 5%;
+}
+
+.button {
   background-color: #0c4433bb;
   border: none;
   box-shadow: 0 0 15px #2227;
@@ -25,7 +34,28 @@ main {
   transition: all 400ms ease-in-out;
 }
 
-.restart-button:hover {
+.button:hover {
   background-color: #54e9bcff;
   transform: scale(1.2);
+}
+
+.menu-button {
+  background-color: #440c0cbb;
+}
+
+.menu-button:hover {
+  background-color: #be2626;
+}
+
+@media (max-width: 800px) {
+  .buttons-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .button {
+    width: 80%;
+  }
 }

@@ -60,3 +60,9 @@ main {
   background-color: #389e41;
   transform: scale(1.2);
 }
+
+@media (max-width: 800px) {
+  .select-container, #start-button {
+    width: 80%;
+  }
+}

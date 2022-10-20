@@ -5,10 +5,11 @@ import { setCronometerTime } from "./utils/setCronometerTime.js";
 let windowHeight = 0;
 let windowWidth = 0;
 let lifes = 3;
-let timeRemaining = 10;
+let timeRemaining = 20;
+let timeAccordingToDifficulty = 0;
 setCronometerTime(timeRemaining);
 
-let level = window.location.search.replace('?', '');
+let level = localStorage.getItem('level');
 alert(level)
 
 const cronometer = setInterval(() => {
@@ -66,7 +67,16 @@ const renderImageInRandomPosition = () => {
   })
 }
 
+if (level === 'easy')
+  timeAccordingToDifficulty = 3000;
+if (level === 'medium')
+  timeAccordingToDifficulty = 2000;
+if (level === 'difficult')
+  timeAccordingToDifficulty = 1000;
+if (level === 'extreme')
+  timeAccordingToDifficulty = 750;
+
 renderImageInRandomPosition();
 const createFlies = setInterval(() => {
   renderImageInRandomPosition()
-}, 1000);
+}, timeAccordingToDifficulty);

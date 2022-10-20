@@ -2,7 +2,9 @@ const startGame = (el) => {
   const level = document.querySelector('#difficulty-selection').value;
 
   if (level !== 'default') {
-    location.href = `./assets/pages/game.html?${level}`;
+    el.preventDefault();
+    localStorage.setItem('level', level);
+    location.href = './assets/pages/game.html';
   }
   else 
     alert('Escolha um nível');
